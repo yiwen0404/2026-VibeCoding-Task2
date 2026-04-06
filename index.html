@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chen Yiwen · Frontend Developer 個人品牌網站</title>
-  <meta name="description" content="這是一個前端工程師的個人品牌網站，用來介紹個人背景、專業技能、作品集展示與聯絡方式，提供完整的履歷與技術能力資訊。">
+  <title>Alex Chen · Frontend Developer｜個人品牌網站</title>
+  <meta name="description" content="這是一個前端工程師的個人品牌網站，用來介紹個人背景、技術技能、作品集展示以及聯絡方式，作為專業形象與職涯發展的展示平台。">
 
   <style>
-    /* =========================================================
+
+    /* =========================
        CSS:BASE-START
-       ========================================================= */
+    ========================= */
 
     *,
     *::before,
@@ -19,17 +20,22 @@
 
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background-color: #0f172a;
-      color: #e5e7eb;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Noto Sans TC",
+        sans-serif;
       line-height: 1.7;
+      background-color: #0b1220;
+      color: #e5e7eb;
     }
 
     img {
       max-width: 100%;
       height: auto;
       display: block;
-      border-radius: 8px;
     }
 
     a {
@@ -63,36 +69,33 @@
     }
 
     .section-title {
-      font-size: 1.8rem;
+      font-size: 1.75rem;
       margin-bottom: 1rem;
-      color: #ffffff;
+      color: #f9fafb;
     }
-
-    /* Header / Nav */
 
     .site-header {
       position: sticky;
       top: 0;
-      background-color: rgba(15, 23, 42, 0.95);
-      backdrop-filter: blur(6px);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      z-index: 100;
+      z-index: 10;
+      background-color: #0f172a;
+      border-bottom: 1px solid #1f2937;
     }
 
     .nav {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       padding: 1rem 0;
     }
 
     .logo {
       font-weight: 700;
       font-size: 1.1rem;
-      color: #ffffff;
+      color: #f9fafb;
     }
 
-    .nav-menu {
+    .nav-links {
       display: flex;
       gap: 1rem;
       flex-wrap: wrap;
@@ -108,28 +111,33 @@
     }
 
     footer {
+      background-color: #020617;
+      border-top: 1px solid #1f2937;
       text-align: center;
       padding: 2rem 1rem;
-      border-top: 1px solid rgba(255,255,255,0.08);
       font-size: 0.9rem;
       color: #9ca3af;
     }
 
-    /* =========================================================
+    /* =========================
        CSS:BASE-END
-       ========================================================= */
+    ========================= */
 
 
 
-    /* =========================================================
+    /* =========================
        CSS:HERO-START
-       ========================================================= */
+    ========================= */
 
     .section-hero {
-      background: linear-gradient(180deg, #020617 0%, #0f172a 100%);
+      background: linear-gradient(
+        180deg,
+        #020617 0%,
+        #0b1220 100%
+      );
     }
 
-    .hero-wrapper {
+    .hero-grid {
       display: flex;
       flex-direction: column;
       gap: 2rem;
@@ -141,87 +149,70 @@
       color: #ffffff;
     }
 
-    .hero-text {
-      color: #cbd5f5;
+    .hero-image img {
+      border-radius: 0.75rem;
     }
 
-    .hero-image {
-      margin-top: 1.5rem;
+    .hero-note {
+      font-size: 0.9rem;
+      color: #9ca3af;
+      margin-top: 1rem;
     }
 
-    /* =========================================================
+    /* =========================
        CSS:HERO-END
-       ========================================================= */
+    ========================= */
 
 
 
-    /* =========================================================
+    /* =========================
        CSS:ABOUT-START
-       ========================================================= */
+    ========================= */
 
-    .section-about {
-      background-color: #020617;
+    .section-about p {
+      margin-bottom: 1rem;
+      color: #d1d5db;
     }
 
-    .about-wrapper {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-
-    /* =========================================================
+    /* =========================
        CSS:ABOUT-END
-       ========================================================= */
+    ========================= */
 
 
 
-    /* =========================================================
+    /* =========================
        CSS:SKILLS-START
-       ========================================================= */
+    ========================= */
 
-    .section-skills {
-      background-color: #0f172a;
+    .section-skills p {
+      margin-bottom: 1rem;
+      color: #d1d5db;
     }
 
-    .skill-placeholder {
-      background-color: rgba(255,255,255,0.05);
-      padding: 1.5rem;
-      border-radius: 10px;
-    }
-
-    /* =========================================================
+    /* =========================
        CSS:SKILLS-END
-       ========================================================= */
+    ========================= */
 
 
 
-    /* =========================================================
+    /* =========================
        CSS:PROJECTS-START
-       ========================================================= */
+    ========================= */
 
-    .section-projects {
-      background-color: #020617;
+    .section-projects p {
+      margin-bottom: 1rem;
+      color: #d1d5db;
     }
 
-    .project-placeholder {
-      background-color: rgba(255,255,255,0.05);
-      padding: 1.5rem;
-      border-radius: 10px;
-    }
-
-    /* =========================================================
+    /* =========================
        CSS:PROJECTS-END
-       ========================================================= */
+    ========================= */
 
 
 
-    /* =========================================================
+    /* =========================
        CSS:CONTACT-START
-       ========================================================= */
-
-    .section-contact {
-      background-color: #0f172a;
-    }
+    ========================= */
 
     .contact-list {
       list-style: none;
@@ -233,42 +224,45 @@
       margin-bottom: 0.5rem;
     }
 
-    /* =========================================================
+    /* =========================
        CSS:CONTACT-END
-       ========================================================= */
+    ========================= */
 
 
 
-    /* =========================================================
+    /* =========================
        CSS:RWD-START
-       ========================================================= */
+    ========================= */
 
     @media (min-width: 768px) {
 
-      .hero-wrapper {
+      .hero-grid {
         flex-direction: row;
         align-items: center;
       }
 
-      .about-wrapper {
-        flex-direction: row;
-        align-items: center;
+      .hero-text,
+      .hero-image {
+        flex: 1;
+      }
+
+    }
+
+    @media (min-width: 1440px) {
+
+      .section {
+        padding: 6rem 0;
       }
 
       .hero-title {
         font-size: 2.6rem;
       }
+
     }
 
-    @media (min-width: 1440px) {
-      .section {
-        padding: 5rem 0;
-      }
-    }
-
-    /* =========================================================
+    /* =========================
        CSS:RWD-END
-       ========================================================= */
+    ========================= */
 
   </style>
 </head>
@@ -278,9 +272,9 @@
 
     <header class="site-header">
       <div class="container nav">
-        <div class="logo">Chen Yiwen · Frontend Dev</div>
+        <div class="logo">Alex Chen · Frontend Dev</div>
 
-        <nav class="nav-menu">
+        <nav class="nav-links">
           <a class="nav-link" href="#hero">首頁</a>
           <a class="nav-link" href="#about">關於我</a>
           <a class="nav-link" href="#skills">技能</a>
@@ -294,26 +288,32 @@
 
       <!-- SECTION:HERO-START -->
       <section id="hero" class="section section-hero">
-        <div class="container hero-wrapper">
+        <div class="container hero-grid">
 
-          <div>
-            <h1 class="hero-title">個人品牌網站主視覺區（Hero 區占位）</h1>
+          <div class="hero-text">
+            <h1 class="hero-title">這裡是個人品牌網站的 Hero 主視覺區（之後將被正式內容取代）</h1>
 
-            <p class="hero-text">
-              這裡之後會放一句話自我介紹、核心職稱（例如 Frontend Developer）以及主要行動呼籲，
-              例如「瀏覽作品集」或「下載履歷」。
+            <p>
+              目前為 Hero 區占位內容。未來會放入一句話自我介紹、核心職稱（例如 Frontend Developer），
+              以及行動呼籲，例如瀏覽作品集或下載履歷。
             </p>
 
-            <p class="hero-text">
-              之後會用 Section SDD 的 Prompt 產生正式文案與版面，
-              再把整個 section 程式碼整段貼回來取代這一區。
+            <p>
+              版面與文案將透過 Section SDD Prompt 產生正式設計，
+              包含視覺排版、CTA 按鈕與品牌定位內容。
+            </p>
+
+            <p class="hero-note">
+              👉 之後會用 Section SDD 的 Prompt 產生新的 section，
+              請把新的 section 程式碼整段貼在這兩個註解中間，
+              完全取代現在這一區。
             </p>
           </div>
 
           <div class="hero-image">
             <img
               src="https://source.unsplash.com/800x600/?developer,laptop,workspace"
-              alt="在筆電前撰寫程式碼的前端開發者工作情境"
+              alt="在筆電前進行前端開發工作的工程師工作場景"
               loading="lazy">
           </div>
 
@@ -325,32 +325,21 @@
 
       <!-- SECTION:ABOUT-START -->
       <section id="about" class="section section-about" aria-labelledby="about-heading">
-        <div class="container about-wrapper">
+        <div class="container">
+          <h2 id="about-heading" class="section-title">
+            關於我（之後會用 Section SDD 替換）
+          </h2>
 
-          <div>
-            <h2 id="about-heading" class="section-title">
-              關於我（之後會用 Section SDD 替換）
-            </h2>
+          <p>
+            這裡目前是 About 區的占位內容，未來將會介紹個人背景、
+            職涯歷程、學習經驗與專業定位。
+          </p>
 
-            <p>
-              這裡目前是 About 區的占位內容。未來會透過 Section SDD
-              產生完整的個人介紹、背景故事與專業定位。
-            </p>
-
-            <p>
-              之後會用 Section SDD 的 Prompt 產生新的 section，
-              請把新的 section 程式碼整段貼在這兩個註解中間，
-              完全取代現在這一區。
-            </p>
-          </div>
-
-          <div>
-            <img
-              src="https://source.unsplash.com/800x600/?programmer,desk,computer"
-              alt="前端工程師桌面與開發環境示意圖"
-              loading="lazy">
-          </div>
-
+          <p>
+            之後會用 Section SDD 的 Prompt 產生新的 section，
+            請把新的 section 程式碼整段貼在這兩個註解中間，
+            完全取代現在這一區。
+          </p>
         </div>
       </section>
       <!-- SECTION:ABOUT-END -->
@@ -360,24 +349,20 @@
       <!-- SECTION:SKILLS-START -->
       <section id="skills" class="section section-skills" aria-labelledby="skills-heading">
         <div class="container">
-
           <h2 id="skills-heading" class="section-title">
             技能（之後會用 Section SDD 替換）
           </h2>
 
-          <div class="skill-placeholder">
-            <p>
-              目前為 Skills 區占位內容，未來會放入技術技能分類、
-              技術標籤、熟練程度與相關工具。
-            </p>
+          <p>
+            目前為 Skills 區占位內容，未來會展示前端技術能力、
+            工具鏈、開發流程與專業熟練度。
+          </p>
 
-            <p>
-              之後會用 Section SDD 的 Prompt 產生新的 section，
-              請把新的 section 程式碼整段貼在這兩個註解中間，
-              完全取代現在這一區。
-            </p>
-          </div>
-
+          <p>
+            之後會用 Section SDD 的 Prompt 產生新的 section，
+            請把新的 section 程式碼整段貼在這兩個註解中間，
+            完全取代現在這一區。
+          </p>
         </div>
       </section>
       <!-- SECTION:SKILLS-END -->
@@ -387,24 +372,20 @@
       <!-- SECTION:PROJECTS-START -->
       <section id="projects" class="section section-projects" aria-labelledby="projects-heading">
         <div class="container">
-
           <h2 id="projects-heading" class="section-title">
             作品集（之後會用 Section SDD 替換）
           </h2>
 
-          <div class="project-placeholder">
-            <p>
-              這裡目前是作品集區的占位內容，之後會展示實際專案卡片、
-              專案描述、技術使用與作品連結。
-            </p>
+          <p>
+            這裡目前為 Projects 區占位內容，未來將放置專案卡片、
+            專案說明、技術堆疊與成果展示。
+          </p>
 
-            <p>
-              之後會用 Section SDD 的 Prompt 產生新的 section，
-              請把新的 section 程式碼整段貼在這兩個註解中間，
-              完全取代現在這一區。
-            </p>
-          </div>
-
+          <p>
+            之後會用 Section SDD 的 Prompt 產生新的 section，
+            請把新的 section 程式碼整段貼在這兩個註解中間，
+            完全取代現在這一區。
+          </p>
         </div>
       </section>
       <!-- SECTION:PROJECTS-END -->
@@ -414,14 +395,13 @@
       <!-- SECTION:CONTACT-START -->
       <section id="contact" class="section section-contact" aria-labelledby="contact-heading">
         <div class="container">
-
           <h2 id="contact-heading" class="section-title">
             聯絡我（之後會用 Section SDD 替換）
           </h2>
 
           <p>
-            目前為 Contact 區占位內容。未來會放入 Email、
-            GitHub、LinkedIn 或其他聯絡方式與表單資訊。
+            目前為 Contact 區占位內容，未來會提供聯絡方式、
+            社群連結與合作邀約資訊。
           </p>
 
           <p>
@@ -433,10 +413,9 @@
           <ul class="contact-list">
             <li><a href="mailto:hello@example.com">Email：hello@example.com</a></li>
             <li><a href="tel:+886900000000">電話：+886 900-000-000</a></li>
-            <li><a href="https://github.com/yourname">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/yourname">LinkedIn</a></li>
+            <li><a href="https://github.com/yourname">GitHub：github.com/yourname</a></li>
+            <li><a href="https://www.linkedin.com/in/yourname">LinkedIn：linkedin.com/in/yourname</a></li>
           </ul>
-
         </div>
       </section>
       <!-- SECTION:CONTACT-END -->
@@ -444,7 +423,7 @@
     </main>
 
     <footer>
-      © 2026 Chen Yiwen · Frontend Developer. All rights reserved.
+      © 2026 Alex Chen · Frontend Developer. All Rights Reserved.
     </footer>
 
   </div>
